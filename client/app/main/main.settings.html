@@ -1,0 +1,18 @@
+<h3 class="page-header">Settings</h3>
+
+<h4>Units:</h4>
+	<div>
+    <span class="clickable" ng-class="{active: inF}" ng-click="inF = true">&#176;F</span> 
+    <span class="clickable" ng-class="{active: !inF}" ng-click="inF = false">&#176;C</span>
+  </div>
+  <div>
+    <span class="clickable" ng-class="{active: impUnits}" ng-click="impUnits = true">Imperial</span> 
+    <span class="clickable" ng-class="{active: !impUnits}" ng-click="impUnits = false">Metric</span>
+  </div>
+ <h4>Activities:</h4> 
+ <input type="checkbox" ng-model="sports.selectAll" ng-change="selectAll()"/> <span>Select All</span>
+  <div ng-repeat="sport in sports">
+	  <!-- <input type="checkbox" ng-model="sport.chosen" ng-change="updateSports()"/> -->
+  	  <input type="checkbox" ng-model="sport.chosen" ng-change="updateSports()"/>
+	  <span>{{sport.name}}</span>
+ </div>

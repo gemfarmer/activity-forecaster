@@ -1,6 +1,6 @@
 [
 {
-	"sport": "Running",
+	"name": "Running",
 	"waterSport": false,
 	"needDryGround": false,
 	"betterInRain": false,
@@ -12,10 +12,13 @@
 	"snowEnjoyability": 5,
 	"tempLowF": 0,
 	"tempHighF":85,
-	"bestTempF": 60
+	"bestTempF": 60,
+	"requiredWind":0,
+	"maxWind":20,
+	"chosen": false
 },
 {
-	"sport": "Golf",
+	"name": "Golf",
 	"waterSport": false,
 	"needDryGround": false,
 	"betterInRain": false,
@@ -27,11 +30,14 @@
 	"snowEnjoyability": 0,
 	"tempLowF": 40,
 	"tempHighF":100,
-	"bestTempF": 70
+	"bestTempF": 70,
+	"requiredWind":0,
+	"maxWind":20,
+	"chosen": false
 },
 {
-	"sport": "Swimming",
-	"waterSport": false,
+	"name": "Swimming",
+	"waterSport": true,
 	"needDryGround": false,
 	"betterInRain": false,
 	"playInRain": true,
@@ -42,7 +48,46 @@
 	"snowEnjoyability": 0,
 	"tempLowF": 60,
 	"tempHighF":110,
-	"bestTempF": 80
+	"bestTempF": 80,
+	"requiredWind":0,
+	"maxWind":30,
+	"chosen": false
+},
+{
+	"name": "Sailing",
+	"waterSport": true,
+	"needDryGround": false,
+	"betterInRain": false,
+	"playInRain": true,
+	"rainEnjoyability": 20,
+	"estDuration": 180,
+	"needSnow": false,
+	"betterInSnow": false,
+	"snowEnjoyability": 0,
+	"tempLowF": 45,
+	"tempHighF":90,
+	"bestTempF": 70,
+	"requiredWind":10,
+	"maxWind":40,
+	"chosen": false
+},
+{
+	"name": "Nordic Skiing",
+	"waterSport": false,
+	"needDryGround": false,
+	"betterInRain": false,
+	"playInRain": true,
+	"rainEnjoyability": 0,
+	"estDuration": 180,
+	"needSnow": true,
+	"betterInSnow": true,
+	"snowEnjoyability": 0,
+	"tempLowF": -5,
+	"tempHighF":40,
+	"bestTempF": 25,
+	"requiredWind":0,
+	"maxWind":15,
+	"chosen": false
 }
 
 ]

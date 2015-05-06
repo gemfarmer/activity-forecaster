@@ -1,0 +1,39 @@
+<h3 class="page-header">Today</h3>
+      
+<div>{{currentConditions.display_location.full}} {{currentConditions.display_location.zip}}</div>
+<img src="{{currentConditions.icon_url}}"/>
+<div>
+  <span class="primaryTemp" ng-if="Settings.inF">{{currentConditions.temp_f}}&#176;</span>
+  <span class="primaryTemp" ng-if='!Settings.inF'>{{currentConditions.temp_c}}&#176;</span> 
+</div>
+
+<div>
+  <span><b>Wind:</b> {{currentConditions.wind_string}}</span>
+</div>
+<div>
+  <span ng-if="Settings.inF"><b>Feels Like:</b></b> {{currentConditions.feelslike_f}}&#176;</span>
+  <span ng-if='!Settings.inF'><b>Feels Like:</b> {{currentConditions.feelslike_c}}&#176;</span> 
+</div>
+<div>
+  <span ng-if="Settings.impUnits"><b>Precipitation:</b> {{currentConditions.precip_1hr_in}} in</span>
+  <span ng-if='!Settings.impUnits'><b>Precipitation:</b> {{currentConditions.precip_1hr_metric}} cm</span> 
+</div>
+
+<div>
+  <span ng-if="Settings.impUnits"><b>Pressure:</b> {{currentConditions.pressure_in}} in</span>
+  <span ng-if='!Settings.impUnits'><b>Pressure:</b> {{currentConditions.pressure_mb}} mbar</span> 
+</div>
+
+<div>
+  <span ng-if="Settings.impUnits"><b>Visibility:</b> {{currentConditions.visibility_mi}} mi</span>
+  <span ng-if='!Settings.impUnits'><b>Visibility:</b> {{currentConditions.visibility_km}} km</span> 
+</div>
+
+<div>
+  <span ng-if="Settings.impUnits && currentConditions.windchill_f"><b>Wind Chill:</b> {{currentConditions.windchill_f}}&#176;</span>
+  <span ng-if='!Settings.impUnits && currentConditions.windchill_c' ><b>Wind Chill:</b> {{currentConditions.windchill_c}}&#176;</span> 
+</div>
+
+<div>
+  <span><b>UV Index:</b> {{currentConditions.UV}}</span>
+</div>

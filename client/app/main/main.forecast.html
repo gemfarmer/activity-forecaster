@@ -1,0 +1,20 @@
+
+<ul>
+  <h3 class="page-header">Forecast</h3>
+  <li class="col-md-4 col-lg-4 col-sm-4" ng-repeat="forecastDay in forecastDays" style="list-style-type:none; min-height:156px;">
+    
+    <img src="{{forecastDay.icon_url}}"/>
+    <div><b>{{forecastDay.date.weekday}}</b></div>
+    
+    <div>
+      <span class="secondaryTemp" ng-if="inF">{{forecastDay.high.fahrenheit}}&#176;</span>
+      <span class="secondaryTemp" ng-if='!inF'>{{forecastDay.high.celsius}}&#176;</span> 
+      /
+      <span class="secondaryTemp" ng-if="inF">{{forecastDay.low.fahrenheit}}&#176;</span>
+      <span class="secondaryTemp" ng-if='!inF'>{{forecastDay.low.celsius}}&#176;</span>
+    </div>
+    <div>{{forecastDay.conditions}}</div>
+    <!-- <div>{{forecastDay | filterSports:sports:forecastDay}}</div> -->
+    <div>{{forecastDay | filterSports:forecastDay}}</div>
+  </li>
+</ul>
