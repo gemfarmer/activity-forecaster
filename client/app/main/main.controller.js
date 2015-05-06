@@ -26,7 +26,7 @@ angular.module('activityForecasterApp')
     	$scope.sports = ipCookie('sports');
 
     	Sports.list = ipCookie('sports');
-    	console.log(Sports)
+    	// console.log(Sports)
     } else {
     	$http.get('/api/sports').success(function(sports){
 	    	// console.log('sports', sports)

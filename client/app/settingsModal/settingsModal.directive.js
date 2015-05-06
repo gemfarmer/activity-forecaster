@@ -17,7 +17,7 @@ angular.module('activityForecasterApp')
 	    }, modalInstance;
 
       	scope.openModal = function(){
-      		console.log('open modal', $modal)
+      		// console.log('open modal', $modal)
 
 	        modalInstance = $modal.open(settingsModalConfig);
       	}
