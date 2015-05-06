@@ -2,12 +2,12 @@
 
 <h4>Units:</h4>
 	<div>
-    <span class="clickable" ng-class="{active: inF}" ng-click="inF = true">&#176;F</span> 
-    <span class="clickable" ng-class="{active: !inF}" ng-click="inF = false">&#176;C</span>
+    <span class="clickable" ng-class="{active: Settings.inF}" ng-click="Settings.inF = true">&#176;F</span> 
+    <span class="clickable" ng-class="{active: !Settings.inF}" ng-click="Settings.inF = false">&#176;C</span>
   </div>
   <div>
-    <span class="clickable" ng-class="{active: impUnits}" ng-click="impUnits = true">Imperial</span> 
-    <span class="clickable" ng-class="{active: !impUnits}" ng-click="impUnits = false">Metric</span>
+    <span class="clickable" ng-class="{active: Settings.impUnits}" ng-click="Settings.impUnits = true">Imperial</span> 
+    <span class="clickable" ng-class="{active: !Settings.impUnits}" ng-click="Settings.impUnits = false">Metric</span>
   </div>
  <h4>Activities:</h4> 
  <input type="checkbox" ng-model="sports.selectAll" ng-change="selectAll()"/> <span>Select All</span>

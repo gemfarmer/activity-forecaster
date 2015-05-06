@@ -88,27 +88,11 @@ angular.module('activityForecasterApp')
 				return sport;
       		}
 		}
-
-	// 	"name": "Sailing",
-	// "waterSport": true,
-	// "needDryGround": false,
-	// "betterInRain": false,
-	// "playInRain": true,
-	// "rainEnjoyability": 20,
-	// "estDuration": 180,
-	// "needSnow": false,
-	// "betterInSnow": false,
-	// "snowEnjoyability": 0,
-	// "tempLowF": 45,
-	// "tempHighF":90,
-	// "bestTempF": 70,
-	// "requiredWind":10,
-	// "maxWind":40
       });
 
 
       // format to string
-      var formattedString = 'Possible Sports: ';
+      var formattedString = '';
       console.log('returnedSports', sports)
       sports = _.forEach(sports, function(sport, n){
       	console.log('sport name',sport.name)
@@ -120,9 +104,7 @@ angular.module('activityForecasterApp')
       	return sport.name;
       });
 	  console.log('return',formattedString)
-	  if (formattedString === 'Possible Sports: '){
-	  	formattedString = 'Consider Coding';
-	  }
+	
 	  return formattedString;
     };
   }]);

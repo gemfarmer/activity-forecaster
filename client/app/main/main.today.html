@@ -1,12 +1,11 @@
-<h3 class="page-header">Today</h3>
-      
-<div>{{currentConditions.display_location.full}} {{currentConditions.display_location.zip}}</div>
-<img src="{{currentConditions.icon_url}}"/>
-<div>
-  <span class="primaryTemp" ng-if="Settings.inF">{{currentConditions.temp_f}}&#176;</span>
-  <span class="primaryTemp" ng-if='!Settings.inF'>{{currentConditions.temp_c}}&#176;</span> 
-</div>
-
+<h3 class="page-header">Today </h3><h4>{{currentConditions.display_location.full}} {{currentConditions.display_location.zip}}</h4>
+  <img src="{{currentConditions.icon_url}}"/>
+  
+  <div>
+    <span class="primaryTemp" ng-if="Settings.inF">{{currentConditions.temp_f}}&#176;</span>
+    <span class="primaryTemp" ng-if='!Settings.inF'>{{currentConditions.temp_c}}&#176;</span> 
+  </div>
+<br>
 <div>
   <span><b>Wind:</b> {{currentConditions.wind_string}}</span>
 </div>

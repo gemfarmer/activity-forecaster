@@ -1,5 +1,9 @@
-.thing-form {
-    margin: 20px 0;
+.navbar{
+    background: #4393B9;
+
+}
+#site-name{
+    color: white;
 }
 
 #banner {
@@ -42,4 +46,9 @@
 }
 .secondaryTemp{
     font-size: 1.5em;
+}
+
+.activity{
+    list-style-type:none; 
+    min-height:160px;
 }

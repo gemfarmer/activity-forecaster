@@ -1,20 +1,27 @@
 
-<ul>
+<div>
   <h3 class="page-header">Forecast</h3>
-  <li class="col-md-4 col-lg-4 col-sm-4" ng-repeat="forecastDay in forecastDays" style="list-style-type:none; min-height:156px;">
+  <li class="activity col-md-4 col-lg-4 col-sm-4" ng-repeat="forecastDay in forecastDays">
+    <center>
+      <img src="{{forecastDay.icon_url}}"/>
+      <div><b>{{forecastDay.date.weekday}}</b></div>
+      
+      <div>
+        <span class="secondaryTemp" ng-if="Settings.inF">{{forecastDay.high.fahrenheit}}&#176;</span>
+        <span class="secondaryTemp" ng-if='!Settings.inF'>{{forecastDay.high.celsius}}&#176;</span> 
+        /
+        <span class="secondaryTemp" ng-if="Settings.inF">{{forecastDay.low.fahrenheit}}&#176;</span>
+        <span class="secondaryTemp" ng-if='!Settings.inF'>{{forecastDay.low.celsius}}&#176;</span>
+      </div>
+      <div><em>{{forecastDay.conditions}}</em></div>
     
-    <img src="{{forecastDay.icon_url}}"/>
-    <div><b>{{forecastDay.date.weekday}}</b></div>
+
     
-    <div>
-      <span class="secondaryTemp" ng-if="inF">{{forecastDay.high.fahrenheit}}&#176;</span>
-      <span class="secondaryTemp" ng-if='!inF'>{{forecastDay.high.celsius}}&#176;</span> 
-      /
-      <span class="secondaryTemp" ng-if="inF">{{forecastDay.low.fahrenheit}}&#176;</span>
-      <span class="secondaryTemp" ng-if='!inF'>{{forecastDay.low.celsius}}&#176;</span>
-    </div>
-    <div>{{forecastDay.conditions}}</div>
     <!-- <div>{{forecastDay | filterSports:sports:forecastDay}}</div> -->
-    <div>{{forecastDay | filterSports:forecastDay}}</div>
+    <div>
+      <span ng-if="forecastDay | filterSports:forecastDay"><b>Activities:</b> </span>
+      <span ng-if="!(forecastDay | filterSports:forecastDay)"><b>Consider Coding...</b> </span>
+      {{forecastDay | filterSports:forecastDay}}</div>
+      </center>
   </li>
-</ul>
+</div>

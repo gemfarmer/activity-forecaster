@@ -18,7 +18,7 @@ angular.module('activityForecasterApp')
 	    });
 	  // }
 	console.log('ipCookie',ipCookie('sports'))
-    if(ipCookie('sports')){
+    if(!ipCookie('sports')){
     	// console.log('sports', sports)
     	$scope.sports = ipCookie('sports');
 

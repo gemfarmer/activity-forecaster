@@ -88,6 +88,24 @@
 	"requiredWind":0,
 	"maxWind":15,
 	"chosen": true
+},
+{
+	"name": "Walk in the Rain",
+	"waterSport": false,
+	"needDryGround": false,
+	"betterInRain": true,
+	"playInRain": true,
+	"rainEnjoyability": 100,
+	"estDuration": 60,
+	"needSnow": false,
+	"betterInSnow": false,
+	"snowEnjoyability": 0,
+	"tempLowF": 40,
+	"tempHighF":90,
+	"bestTempF": 62,
+	"requiredWind":0,
+	"maxWind":10,
+	"chosen": true
 }
 
 ]
