@@ -106,6 +106,24 @@
 	"requiredWind":0,
 	"maxWind":10,
 	"chosen": true
+},
+{
+	"name": "Biking",
+	"waterSport": false,
+	"needDryGround": false,
+	"betterInRain": false,
+	"playInRain": false,
+	"rainEnjoyability": 30,
+	"estDuration": 180,
+	"needSnow": false,
+	"betterInSnow": false,
+	"snowEnjoyability": 10,
+	"tempLowF": 10,
+	"tempHighF":90,
+	"bestTempF": 55,
+	"requiredWind":0,
+	"maxWind":10,
+	"chosen": true
 }
 
 ]

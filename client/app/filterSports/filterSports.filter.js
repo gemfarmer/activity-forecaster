@@ -6,7 +6,7 @@ angular.module('activityForecasterApp')
 
 
     return function (day) {
-    	console.log(day, sports, Sports)
+    	// console.log(day, sports, Sports)
       
       var sports = Sports.list;
       // filter chosen sports
@@ -32,7 +32,6 @@ angular.module('activityForecasterApp')
 			return sport;
 		}
       });
-
       // filter rain
       sports = _.filter(sports, function(sport){
       	var rainDayIn = parseInt(day.qpf_day.in);
@@ -53,16 +52,15 @@ angular.module('activityForecasterApp')
       		}
 			
 		} else if (rainDayIn >= .5 && sport.playInRain){
-			if(sport.rainEnjoyability >= 50){
+			if(sport.rainEnjoyability >= 30){
 				return sport;
       		}
 		} else if (rainDayIn >= 1 && sport.playInRain){
-			if(sport.rainEnjoyability >= 75){
+			if(sport.rainEnjoyability >= 55){
 				return sport;
       		}
 		}
       });
-
       // filter snow
       sports = _.filter(sports, function(sport){
       	var snowDayIn = parseInt(day.snow_day.in);
@@ -90,12 +88,11 @@ angular.module('activityForecasterApp')
 		}
       });
 
-
       // format to string
       var formattedString = '';
-      console.log('returnedSports', sports)
+      // console.log('returnedSports', sports)
       sports = _.forEach(sports, function(sport, n){
-      	console.log('sport name',sport.name)
+      	// console.log('sport name',sport.name)
       	if (n === 0){
       		formattedString = formattedString + sport.name;
       	} else {
@@ -103,7 +100,7 @@ angular.module('activityForecasterApp')
       	}
       	return sport.name;
       });
-	  console.log('return',formattedString)
+	  // console.log('return',formattedString)
 	
 	  return formattedString;
     };

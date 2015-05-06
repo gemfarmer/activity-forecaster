@@ -1,0 +1,29 @@
+
+      <div class="" style="padding:15px;">
+        <center><h3 class="page-header">Settings</h3><center>
+      </div>
+      <div style="padding:15px;" class="">
+        
+
+		<h4>Units:</h4>
+			<div>
+		    <span class="clickable" ng-class="{active: Settings.inF}" ng-click="Settings.inF = true">&#176;F</span> 
+		    <span class="clickable" ng-class="{active: !Settings.inF}" ng-click="Settings.inF = false">&#176;C</span>
+		  </div>
+		  <div>
+		    <span class="clickable" ng-class="{active: Settings.impUnits}" ng-click="Settings.impUnits = true">Imperial</span> 
+		    <span class="clickable" ng-class="{active: !Settings.impUnits}" ng-click="Settings.impUnits = false">Metric</span>
+		  </div>
+		 <h4>Activities:</h4> 
+		 <input type="checkbox" ng-model="sports.selectAll" ng-change="selectAll()"/> <span>Select All</span>
+		  <div ng-repeat="sport in sports">
+			  <!-- <input type="checkbox" ng-model="sport.chosen" ng-change="updateSports()"/> -->
+		  	  <input type="checkbox" ng-model="sport.chosen" ng-change="updateSports()"/>
+			  <span>{{sport.name}}</span>
+		 </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="$dismiss()">Close</button>
+      </div>
+
+
