@@ -15,7 +15,7 @@
 	"bestTempF": 60,
 	"requiredWind":0,
 	"maxWind":20,
-	"chosen": false
+	"chosen": true
 },
 {
 	"name": "Golf",
@@ -33,7 +33,7 @@
 	"bestTempF": 70,
 	"requiredWind":0,
 	"maxWind":20,
-	"chosen": false
+	"chosen": true
 },
 {
 	"name": "Swimming",
@@ -51,7 +51,7 @@
 	"bestTempF": 80,
 	"requiredWind":0,
 	"maxWind":30,
-	"chosen": false
+	"chosen": true
 },
 {
 	"name": "Sailing",
@@ -69,7 +69,7 @@
 	"bestTempF": 70,
 	"requiredWind":10,
 	"maxWind":40,
-	"chosen": false
+	"chosen": true
 },
 {
 	"name": "Nordic Skiing",
@@ -87,7 +87,7 @@
 	"bestTempF": 25,
 	"requiredWind":0,
 	"maxWind":15,
-	"chosen": false
+	"chosen": true
 }
 
 ]
