@@ -1,0 +1,48 @@
+[
+{
+	"sport": "Running",
+	"waterSport": false,
+	"needDryGround": false,
+	"betterInRain": false,
+	"playInRain": true,
+	"rainEnjoyability": 40,
+	"estDuration": 30,
+	"needSnow": false,
+	"betterInSnow": false,
+	"snowEnjoyability": 5,
+	"tempLowF": 0,
+	"tempHighF":85,
+	"bestTempF": 60
+},
+{
+	"sport": "Golf",
+	"waterSport": false,
+	"needDryGround": false,
+	"betterInRain": false,
+	"playInRain": true,
+	"rainEnjoyability": 20,
+	"estDuration": 180,
+	"needSnow": false,
+	"betterInSnow": false,
+	"snowEnjoyability": 0,
+	"tempLowF": 40,
+	"tempHighF":100,
+	"bestTempF": 70
+},
+{
+	"sport": "Swimming",
+	"waterSport": false,
+	"needDryGround": false,
+	"betterInRain": false,
+	"playInRain": true,
+	"rainEnjoyability": 20,
+	"estDuration": 180,
+	"needSnow": false,
+	"betterInSnow": false,
+	"snowEnjoyability": 0,
+	"tempLowF": 60,
+	"tempHighF":110,
+	"bestTempF": 80
+}
+
+]

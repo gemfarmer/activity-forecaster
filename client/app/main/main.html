@@ -1,0 +1,88 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3 class="page-header">Today</h3>
+      
+      <div>{{currentConditions.display_location.full}} {{currentConditions.display_location.zip}}</div>
+      <img src="{{currentConditions.icon_url}}"/>
+      <div>
+        <span ng-if="inF">{{currentConditions.temp_f}}&#176;</span>
+        <span ng-if='!inF'>{{currentConditions.temp_c}}&#176;</span> 
+      </div>
+
+      <div>
+        <span class="clickable" ng-class="{active: inF}" ng-click="inF = true">&#176;F</span> 
+        <span class="clickable" ng-class="{active: !inF}" ng-click="inF = false">&#176;C</span>
+      </div>
+      <div>
+        <span class="clickable" ng-class="{active: impUnits}" ng-click="impUnits = true">Imperial</span> 
+        <span class="clickable" ng-class="{active: !impUnits}" ng-click="impUnits = false">Metric</span>
+      </div>
+      <div>
+        <span>Wind: {{currentConditions.wind_string}}</span>
+      </div>
+      <div>
+        <span ng-if="inF">Feels Like: {{currentConditions.feelslike_f}}&#176;</span>
+        <span ng-if='!inF'>Feels Like: {{currentConditions.feelslike_c}}&#176;</span> 
+      </div>
+      <div>
+        <span ng-if="impUnits">Precipitation: {{currentConditions.precip_1hr_in}} in</span>
+        <span ng-if='!impUnits'>Precipitation: {{currentConditions.precip_1hr_metric}} cm</span> 
+      </div>
+
+      <div>
+        <span ng-if="impUnits">Pressure: {{currentConditions.pressure_in}} in</span>
+        <span ng-if='!impUnits'>Pressure: {{currentConditions.pressure_mb}} mbar</span> 
+      </div>
+
+      <div>
+        <span ng-if="impUnits">Visibility: {{currentConditions.visibility_mi}} mi</span>
+        <span ng-if='!impUnits'>Visibility: {{currentConditions.visibility_km}} km</span> 
+      </div>
+
+      <div>
+        <span ng-if="impUnits && currentConditions.windchill_f">Wind Chill: {{currentConditions.windchill_f}}&#176;</span>
+        <span ng-if='!impUnits && currentConditions.windchill_c' >Wind Chill: {{currentConditions.windchill_c}}&#176;</span> 
+      </div>
+
+      <div>
+        <span>UV Index: {{currentConditions.UV}}</span>
+      </div>
+
+      
+      <!-- <div>{{currentConditions.temp_f}} &#176;F</div> -->
+      
+      <!-- <hr> -->
+
+      <h3 class="page-header">Forecast</h3>
+      <ul class="col-md-4 col-lg-4 col-sm-6" ng-repeat="forecastDay in forecastDays">
+        <li>
+          
+          <img src="{{forecastDay.icon_url}}"/>
+          <div>{{forecastDay.conditions}}</div>
+          <div>{{forecastDay.date.weekday}}</div>
+          <div>
+            <span ng-if="inF">{{forecastDay.high.fahrenheit}}&#176;</span>
+            <span ng-if='!inF'>{{forecastDay.high.celsius}}&#176;</span> 
+            /
+            <span ng-if="inF">{{forecastDay.low.fahrenheit}}&#176;</span>
+            <span ng-if='!inF'>{{forecastDay.low.celsius}}&#176;</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Angular Fullstack v2.0.13 |
+        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
+         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+  </div>
+</footer>
